@@ -55,5 +55,35 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 | **Tumor Microenvironment** | Similarity = 87.86% (tumor purity, immune score, spatial interactions)   |
 
 
+## 🚀 Quick Start
+
+### 1. Data Processing
+
+1. Run **Split into four positions.py**  
+   Perform quadrant segmentation (upper/lower/left/right) on registered MRI.
+
+2. Run **SVS Processing.py**  
+   Extract multiple 2048-pixel H&E image patches.
+
+3. Use **HoverNet**  
+   Segment and classify nuclei in H&E images, generating detailed JSON files with cell information.
+
+4. Run **Compress JSON.py**  
+   Simplify JSON storage size.
+
+5. Run **Store H5.py**  
+   Store processed cell information in HDF5 format.
+
+6. Run **Match Position.py**  
+   Match positional information of H&E images, then run **1-csv_creat.py** to generate autoregressive labels (pathology IDs).
+
+7. Run **2-csv_sort.py**  
+   Sort pathology IDs, then run **3-csv_text.py** to group CSV files.
+
+8. Run **4-Transfer Column.py** and **5-Rename Column.py**  
+   For multiple batches, run **6-Merge Tables.py** to merge tables.
+
+9. Run **Image Enhancement.py**  
+   Augment MRI samples to match the number of H&E images.
 
 
