@@ -86,4 +86,23 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 9. Run **Image Enhancement.py**  
    Augment MRI samples to match the number of H&E images.
 
+### 2. Autoregressive Training
+
+1. **Prepare MRI–Pathology Pairs**  
+   Use the preprocessed MRI images (T2, ADC, DWI) together with the corresponding pathology labels (CSV files).
+
+2. **Run Multimodal Training**  
+   If you have T2, ADC, and DWI modalities available, run:  
+   **multimodal autoregressive model.py**  
+   This trains the autoregressive model across multiple modalities, learning joint spatial and semantic features.
+
+3. **Run Unimodal Training**  
+   If only T2 images are available, run:  
+   **unimodal autoregressive model.py**  
+   This trains the autoregressive model using single-modality features to generate pathology semantic labels.
+
+4. **Training Output**  
+   - Produces autoregressive pathology label sequences (e.g., `AAAA00001`) encoding Gleason patterns and tumor semantics.  
+   - Saves model weights and training logs for downstream database retrieval and conditional diffusion synthesis.
+
 
