@@ -1,2 +1,2 @@
 # Autopath
-![图像描述](images/technical route.png)
+![图像描述](images/technical_route.png)
