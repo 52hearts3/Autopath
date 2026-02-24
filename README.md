@@ -10,7 +10,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 - **High Pathological Fidelity**: SSIM 0.8678, PSNR 29.59 dB, and nuclear segmentation Dice 0.8066 (closely aligned with real histopathology).
 - **Clinical-Grade Performance**: Quadrant-level diagnosis AUC 0.926, 88.5% csPCa localization hit rate, and GGG classification accuracy 0.8947.
 - **Multilevel Interpretability**: Supports cellular segmentation, TME quantification, Gleason grading, and single-cell gene expression inference.
-
+![technical route](images/diff.jpg)
 ![technical route](images/technical_route.png)
 ## ⚙️ Workflow Overview
 
@@ -39,6 +39,21 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
   - *Clinical*: Gleason grading, csPCa localization, cancer cell differentiation prediction.
   - *Molecular*: Single-cell gene expression inference (via GHIST framework).
 - **Report Generation**: Integrates rapid inference from autoregressive labels and fine-grained analysis from synthetic H&E images to output diagnosis, grading, and clinical suggestions.
+## 📊 Core Validation Results
+
+**AutoPath** is rigorously validated on **6.98M+ images** from 5 independent multicenter cohorts  
+(*Renji, PI-CAI, TCIA, PROSTATE-MRI, CHIMERA*).
+
+| Evaluation Dimension    | Key Metrics                                                                 |
+|-------------------------|------------------------------------------------------------------------------|
+| **Image Quality**       | SSIM = 0.8678, PSNR = 29.59 dB (82–88% samples meet clinical acceptability) |
+| **Nuclear Segmentation**| Dice = 0.8066, Mean Centroid Distance = 9.57 pixels, Classification Accuracy = 0.9001 |
+| **Clinical Diagnosis**  | AUC = 0.926, Recall = 0.990, Specificity = 0.880                            |
+| **csPCa Localization**  | Quadrant-level hit rate = 88.5%                                              |
+| **Cellular Composition**| Similarity = 91.15% (tumor/stromal/inflammatory cells well-matched)         |
+| **Gleason Grading**     | GGG Accuracy = 0.8947, Composite Soft Score = 94.28                         |
+| **Tumor Microenvironment** | Similarity = 87.86% (tumor purity, immune score, spatial interactions)   |
+
 
 
 
