@@ -11,6 +11,8 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 - **Clinical-Grade Performance**: Quadrant-level diagnosis AUC 0.926, 88.5% csPCa localization hit rate, and GGG classification accuracy 0.8947.
 - **Multilevel Interpretability**: Supports cellular segmentation, TME quantification, Gleason grading, and single-cell gene expression inference.
 ![technical route](images/diff.jpg)
+![technical route](images/fig1.jpg)
+![technical route](images/fig2.jpg)
 ![technical route](images/technical_route.png)
 ## ⚙️ Workflow Overview
 
