@@ -116,5 +116,36 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
    For fast inference and image generation, run **ddim.py**.  
    This performs deterministic sampling to reconstruct high-resolution H&E images from MRI-derived conditions.
 
+### 4. Diagnostic Workflow
+![technical route](images/Diagnostic-Workflow.jpg)
+1. **Generate Pathology IDs**  
+   Run **1-autoregressive generation numbering.py** to produce multiple pathology IDs from the autoregressive model.
+
+2. **Modify TXT Format**  
+   Run **2-Modify TXT.py** to adjust the generated TXT files into the required format for downstream processing.
+
+3. **Match Pathology Numbers**  
+   Run **3-Match the numbers.py** to align pathology IDs with the input CSV file created during the data processing stage.  
+   Input: CSV file from the Data Processing workflow.  
+   Output: Matched pathology IDs ready for diagnostic analysis.
+
+4. **Rapid Gleason Diagnosis**  
+   For fast Gleason coefficient analysis, run **gleason.py**.  
+   Input: **gleason.xlsx**  
+   Output: Statistical evaluation of pathology IDs with matched Gleason scores.
+
+5. **Detailed Diagnosis via Synthetic H&E Images**  
+   - Run **Obtain-mask.py** to generate mask images based on pathology IDs.  
+     Input: TXT file created by **2-Modify TXT.py**  
+     Output: Cell-level mask images.  
+   - Run **ddim.py** to synthesize high-resolution H&E images conditioned on the masks.  
+     Output: Histologically plausible H&E patches for detailed diagnostic evaluation.
+## 📚 References
+
+This work builds upon the research paper:  
+**AutoPath: Noninvasive Generation of Histopathological Images from Prostate MRI for Diagnosis and Grading of Prostate Cancer**
+
+For detailed methodology and comprehensive results, please refer to the full paper *(link to be added)*.
+
 
 
