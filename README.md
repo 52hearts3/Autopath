@@ -10,7 +10,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 - **High Pathological Fidelity**: SSIM 0.8678, PSNR 29.59 dB, and nuclear segmentation Dice 0.8066 (closely aligned with real histopathology).
 - **Clinical-Grade Performance**: Quadrant-level diagnosis AUC 0.926, 88.5% csPCa localization hit rate, and GGG classification accuracy 0.8947.
 - **Multilevel Interpretability**: Supports cellular segmentation, TME quantification, Gleason grading, and single-cell gene expression inference.
-
+![technical route](images/diff.jpg)
 ![technical route](images/technical_route.png)
 ## ⚙️ Workflow Overview
 
