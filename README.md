@@ -87,7 +87,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
    Augment MRI samples to match the number of H&E images.
 
 ### 2. Autoregressive Training
-
+![technical route](images/Autoregressive.jpg)
 1. **Prepare MRI–Pathology Pairs**  
    Use the preprocessed MRI images (T2, ADC, DWI) together with the corresponding pathology labels (CSV files).
 
@@ -104,5 +104,17 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 4. **Training Output**  
    - Produces autoregressive pathology label sequences (e.g., `AAAA00001`) encoding Gleason patterns and tumor semantics.  
    - Saves model weights and training logs for downstream database retrieval and conditional diffusion synthesis.
+
+### 3. Conditional Diffusion Model Training
+
+1. **Train the Diffusion Model**  
+   Use the cell masks obtained from database retrieval as control conditions.  
+   Run **ddpm.py** to train the conditional diffusion model.  
+   This step leverages ControlNet and Adaptive Group Normalization (AdaGN) to synthesize histologically plausible H&E patches.
+
+2. **Inference with DDIM**  
+   For fast inference and image generation, run **ddim.py**.  
+   This performs deterministic sampling to reconstruct high-resolution H&E images from MRI-derived conditions.
+
 
 
