@@ -87,7 +87,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
    Augment MRI samples to match the number of H&E images.
 
 ### 2. Autoregressive Training
-
+![technical route](images/Autoregressive.jpg)
 1. **Prepare MRI–Pathology Pairs**  
    Use the preprocessed MRI images (T2, ADC, DWI) together with the corresponding pathology labels (CSV files).
 
