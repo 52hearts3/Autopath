@@ -106,7 +106,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
    - Saves model weights and training logs for downstream database retrieval and conditional diffusion synthesis.
 
 ### 3. Conditional Diffusion Model Training
-
+![technical route](images/ddpm.jpg)
 1. **Train the Diffusion Model**  
    Use the cell masks obtained from database retrieval as control conditions.  
    Run **ddpm.py** to train the conditional diffusion model.  
