@@ -140,5 +140,12 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
      Output: Cell-level mask images.  
    - Run **ddim.py** to synthesize high-resolution H&E images conditioned on the masks.  
      Output: Histologically plausible H&E patches for detailed diagnostic evaluation.
+## 📚 References
+
+This work builds upon the research paper:  
+**AutoPath: Noninvasive Generation of Histopathological Images from Prostate MRI for Diagnosis and Grading of Prostate Cancer**
+
+For detailed methodology and comprehensive results, please refer to the full paper *(link to be added)*.
+
 
 
