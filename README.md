@@ -58,7 +58,7 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 ## 🚀 Quick Start
 
 ### 1. Data Processing
-
+![technical route](images/data-process.jpg)
 1. Run **Split into four positions.py**  
    Perform quadrant segmentation (upper/lower/left/right) on registered MRI.
 
