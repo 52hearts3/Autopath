@@ -98,14 +98,20 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
 
 2. **Run Multimodal Training**  
    If you have T2, ADC, and DWI modalities available, run:  
-   **multimodal autoregressive model.py**  
-   This trains the autoregressive model across multiple modalities, learning joint spatial and semantic features.
-
+   **multimodal autoregressive model.py**    
+   This trains the autoregressive model across multiple modalities, learning joint spatial and semantic features.  
+   If you would like to use our pretrained weights, please download the shared file: model_multimodal.pth  
+   Link: https://pan.baidu.com/s/1k6TCsOm2I8KTWT-NdzCzJg?pwd=fi92  
+   Access code: fi92  
+   
 3. **Run Unimodal Training**  
    If only T2 images are available, run:  
-   **unimodal autoregressive model.py**  
-   This trains the autoregressive model using single-modality features to generate pathology semantic labels.
-
+   **unimodal autoregressive model.py**   
+   This trains the autoregressive model using single-modality features to generate pathology semantic labels.  
+   If you would like to use our pretrained weights, please download the shared file: model_unimodal.pth  
+   Link: https://pan.baidu.com/s/1MatNNWsZVIVqHNc8SVjJXA?pwd=hm84  
+   Access code: hm84  
+    
 4. **Training Output**  
    - Produces autoregressive pathology label sequences (e.g., `AAAA00001`) encoding Gleason patterns and tumor semantics.  
    - Saves model weights and training logs for downstream database retrieval and conditional diffusion synthesis.
