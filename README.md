@@ -74,7 +74,10 @@ Prostate cancer diagnosis currently relies on invasive biopsy for definitive his
    Simplify JSON storage size.
 
 5. Run **Store H5.py**  
-   Store processed cell information in HDF5 format.
+   Store processed cell information in HDF5 format.  
+   If you would like to use the cell dataset we built, please download the shared file: output.h5  
+   Link: https://pan.baidu.com/s/1FG4RJvrNQzDvYSq_jaBGVA?pwd=7hpp  
+   Access code: 7hpp  
 
 6. Run **Match Position.py**  
    Match positional information of H&E images, then run **1-csv_creat.py** to generate autoregressive labels (pathology IDs).
